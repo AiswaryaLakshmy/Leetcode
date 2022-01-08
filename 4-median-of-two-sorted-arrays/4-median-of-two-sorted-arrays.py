@@ -1,20 +1,5 @@
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        '''
-        merged_arr = nums1 + nums2
-        merged_arr.sort()
-        print(merged_arr)
-        l = 0
-        u = len(merged_arr) - 1
-        #print(len(merged_arr))
-        #while l<=u:
-        mid = (l+u) // 2
-        if u % 2 ==0:
-            
-            return (merged_arr[mid]+0.0)
-        else:
-            return ((merged_arr[mid] + merged_arr[mid+1])/2)
-        '''
         if len(nums1) > len(nums2):
             return self.findMedianSortedArrays(nums2, nums1)
 
